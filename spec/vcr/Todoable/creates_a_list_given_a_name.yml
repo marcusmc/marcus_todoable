@@ -1,0 +1,89 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://todoable.teachable.tech/api/authenticate
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Accept:
+      - applicaton/json
+      Content-Type:
+      - application/json
+      Authorization:
+      - Basic bWFyY3VzdGVzdEBnbWFpbC5jb206dG9kb2FibGU=
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 01 Nov 2018 22:05:45 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '88'
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=d99c5ae906e28f0521853c6f1b80aba281541109944; expires=Fri, 01-Nov-19
+        22:05:44 GMT; path=/; domain=.teachable.tech; HttpOnly
+      X-Content-Type-Options:
+      - nosniff
+      X-Request-Id:
+      - B4ECE81A09924301823AF80D8236C672
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 4731aa21e5013fc5-YUL
+    body:
+      encoding: UTF-8
+      string: '{"token":"5fee3fe8-2205-437f-8e59-c9038b905ce7","expires_at":"2018-11-01T22:25:45.027Z"}'
+    http_version: 
+  recorded_at: Thu, 01 Nov 2018 22:05:45 GMT
+- request:
+    method: post
+    uri: http://todoable.teachable.tech/api/lists
+    body:
+      encoding: UTF-8
+      string: '{"list":{"name":"List10"}}'
+    headers:
+      Accept:
+      - applicaton/json
+      Content-Type:
+      - application/json
+      Authorization:
+      - Token token="5fee3fe8-2205-437f-8e59-c9038b905ce7"
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Date:
+      - Thu, 01 Nov 2018 22:05:45 GMT
+      Content-Type:
+      - application/json;charset=utf-8
+      Content-Length:
+      - '147'
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=d25f6549c40e85e8c4feaeed3620db35c1541109945; expires=Fri, 01-Nov-19
+        22:05:45 GMT; path=/; domain=.teachable.tech; HttpOnly
+      Location:
+      - http://todoable.teachable.tech/api/lists/9909fc5e-0863-4ea4-9c3a-355630ca4f9e
+      X-Content-Type-Options:
+      - nosniff
+      X-Request-Id:
+      - FC9BFDF76F8940F9A26D4788C058398C
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 4731aa25b5ef3f77-YUL
+    body:
+      encoding: UTF-8
+      string: '{"name":"List10","src":"http://todoable.teachable.tech/api/lists/9909fc5e-0863-4ea4-9c3a-355630ca4f9e","id":"9909fc5e-0863-4ea4-9c3a-355630ca4f9e"}'
+    http_version: 
+  recorded_at: Thu, 01 Nov 2018 22:05:45 GMT
+recorded_with: VCR 4.0.0

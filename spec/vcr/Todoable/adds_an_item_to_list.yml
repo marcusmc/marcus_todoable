@@ -1,0 +1,89 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://todoable.teachable.tech/api/authenticate
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Accept:
+      - applicaton/json
+      Content-Type:
+      - application/json
+      Authorization:
+      - Basic bWFyY3VzdGVzdEBnbWFpbC5jb206dG9kb2FibGU=
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 01 Nov 2018 22:05:47 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '88'
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=d5fdb299a7d007c89886b8acf7874b2bc1541109947; expires=Fri, 01-Nov-19
+        22:05:47 GMT; path=/; domain=.teachable.tech; HttpOnly
+      X-Content-Type-Options:
+      - nosniff
+      X-Request-Id:
+      - 04CBF78C6EE54D2BB165D0C336F828AF
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 4731aa3306373fb3-YUL
+    body:
+      encoding: UTF-8
+      string: '{"token":"912f4126-bff2-4783-9a6e-15aa8e4b3c02","expires_at":"2018-11-01T22:25:47.816Z"}'
+    http_version: 
+  recorded_at: Thu, 01 Nov 2018 22:05:47 GMT
+- request:
+    method: post
+    uri: http://todoable.teachable.tech/api/lists/9909fc5e-0863-4ea4-9c3a-355630ca4f9e/items
+    body:
+      encoding: UTF-8
+      string: '{"item":{"name":"aNewTestListItem"}}'
+    headers:
+      Accept:
+      - applicaton/json
+      Content-Type:
+      - application/json
+      Authorization:
+      - Token token="912f4126-bff2-4783-9a6e-15aa8e4b3c02"
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Date:
+      - Thu, 01 Nov 2018 22:05:47 GMT
+      Content-Type:
+      - application/json;charset=utf-8
+      Content-Length:
+      - '219'
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=dcff64863a595cc8a70974d687e37c4391541109947; expires=Fri, 01-Nov-19
+        22:05:47 GMT; path=/; domain=.teachable.tech; HttpOnly
+      Location:
+      - http://todoable.teachable.tech/api/lists/9909fc5e-0863-4ea4-9c3a-355630ca4f9e/items/cea47270-a9cf-4808-bb63-b8b8e4375302
+      X-Content-Type-Options:
+      - nosniff
+      X-Request-Id:
+      - 97563FE72F394D39BBC5D980607C8C50
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 4731aa3656d83fbf-YUL
+    body:
+      encoding: UTF-8
+      string: '{"name":"aNewTestListItem","finished_at":null,"src":"http://todoable.teachable.tech/api/lists/9909fc5e-0863-4ea4-9c3a-355630ca4f9e/items/cea47270-a9cf-4808-bb63-b8b8e4375302","id":"cea47270-a9cf-4808-bb63-b8b8e4375302"}'
+    http_version: 
+  recorded_at: Thu, 01 Nov 2018 22:05:47 GMT
+recorded_with: VCR 4.0.0

@@ -1,0 +1,45 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://todoable.teachable.tech/api/authenticate
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Accept:
+      - applicaton/json
+      Content-Type:
+      - application/json
+      Authorization:
+      - Basic bWFyY3VzdGVzdEBnbWFpbC5jb206dG9kb2FibGU=
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 01 Nov 2018 22:05:44 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '88'
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=d06ed4e520103e534c649cb79d8f1b4f21541109943; expires=Fri, 01-Nov-19
+        22:05:43 GMT; path=/; domain=.teachable.tech; HttpOnly
+      X-Content-Type-Options:
+      - nosniff
+      X-Request-Id:
+      - 2A66A23DB5044E1C8B46C8CE24ADFED7
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 4731aa1de3123f77-YUL
+    body:
+      encoding: UTF-8
+      string: '{"token":"c9697ebc-5ea0-459a-9eb2-897e6e98a63a","expires_at":"2018-11-01T22:25:44.516Z"}'
+    http_version: 
+  recorded_at: Thu, 01 Nov 2018 22:05:44 GMT
+recorded_with: VCR 4.0.0

@@ -1,0 +1,87 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://todoable.teachable.tech/api/authenticate
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Accept:
+      - applicaton/json
+      Content-Type:
+      - application/json
+      Authorization:
+      - Basic bWFyY3VzdGVzdEBnbWFpbC5jb206dG9kb2FibGU=
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 01 Nov 2018 22:05:47 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '88'
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=d989050cee2011a8fb54d7581dff2aced1541109946; expires=Fri, 01-Nov-19
+        22:05:46 GMT; path=/; domain=.teachable.tech; HttpOnly
+      X-Content-Type-Options:
+      - nosniff
+      X-Request-Id:
+      - F517F80924864D8C9EAFCE4B7BE37084
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 4731aa2f15d33f7d-YUL
+    body:
+      encoding: UTF-8
+      string: '{"token":"b389bffe-dbaa-4abd-9e3b-6b87d0831147","expires_at":"2018-11-01T22:25:47.216Z"}'
+    http_version: 
+  recorded_at: Thu, 01 Nov 2018 22:05:47 GMT
+- request:
+    method: patch
+    uri: http://todoable.teachable.tech/api/lists/9909fc5e-0863-4ea4-9c3a-355630ca4f9e
+    body:
+      encoding: UTF-8
+      string: '{"list":{"name":"aNewTestList"}}'
+    headers:
+      Accept:
+      - applicaton/json
+      Content-Type:
+      - application/json
+      Authorization:
+      - Token token="b389bffe-dbaa-4abd-9e3b-6b87d0831147"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 01 Nov 2018 22:05:47 GMT
+      Content-Type:
+      - application/json;charset=utf-8
+      Content-Length:
+      - '20'
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=da2c12411af719a80d416dc39465d9f0c1541109947; expires=Fri, 01-Nov-19
+        22:05:47 GMT; path=/; domain=.teachable.tech; HttpOnly
+      X-Content-Type-Options:
+      - nosniff
+      X-Request-Id:
+      - 75C8C18FC09F47B0969F723D0E3065E5
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 4731aa3277143f7d-YUL
+    body:
+      encoding: UTF-8
+      string: aNewTestList updated
+    http_version: 
+  recorded_at: Thu, 01 Nov 2018 22:05:47 GMT
+recorded_with: VCR 4.0.0

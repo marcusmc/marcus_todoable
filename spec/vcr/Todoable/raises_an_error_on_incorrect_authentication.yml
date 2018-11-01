@@ -1,0 +1,51 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://todoable.teachable.tech/api/authenticate
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Accept:
+      - applicaton/json
+      Content-Type:
+      - application/json
+      Authorization:
+      - Basic bm9uZXhpc3RlbnRAZ21haWwuY29tOnRvZG9hYmxl
+  response:
+    status:
+      code: 401
+      message: Unauthorized
+    headers:
+      Date:
+      - Thu, 01 Nov 2018 22:05:43 GMT
+      Content-Type:
+      - text/html;charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=dad0dbf19ff9247907cb9cafb4bb43c461541109942; expires=Fri, 01-Nov-19
+        22:05:42 GMT; path=/; domain=.teachable.tech; HttpOnly
+      Www-Authenticate:
+      - Basic realm="Restricted Area"
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Request-Id:
+      - B377473C9DC64B0987F438F63D64A994
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 4731aa1790173f83-YUL
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Thu, 01 Nov 2018 22:05:43 GMT
+recorded_with: VCR 4.0.0

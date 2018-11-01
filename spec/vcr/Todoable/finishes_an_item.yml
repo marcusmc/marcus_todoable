@@ -1,0 +1,87 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://todoable.teachable.tech/api/authenticate
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Accept:
+      - applicaton/json
+      Content-Type:
+      - application/json
+      Authorization:
+      - Basic bWFyY3VzdGVzdEBnbWFpbC5jb206dG9kb2FibGU=
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 01 Nov 2018 22:05:48 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '88'
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=d47b226943bb1213fba3aab108005dacd1541109947; expires=Fri, 01-Nov-19
+        22:05:47 GMT; path=/; domain=.teachable.tech; HttpOnly
+      X-Content-Type-Options:
+      - nosniff
+      X-Request-Id:
+      - 99C34D6A272E4F818C6D073BFF9C58CB
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 4731aa36e77b3fd1-YUL
+    body:
+      encoding: UTF-8
+      string: '{"token":"27df654b-2803-4ac7-9af2-52fd524e6062","expires_at":"2018-11-01T22:25:48.424Z"}'
+    http_version: 
+  recorded_at: Thu, 01 Nov 2018 22:05:48 GMT
+- request:
+    method: put
+    uri: http://todoable.teachable.tech/api/lists/9909fc5e-0863-4ea4-9c3a-355630ca4f9e/items/cea47270-a9cf-4808-bb63-b8b8e4375302/finish
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Accept:
+      - applicaton/json
+      Content-Type:
+      - application/json
+      Authorization:
+      - Token token="27df654b-2803-4ac7-9af2-52fd524e6062"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 01 Nov 2018 22:05:48 GMT
+      Content-Type:
+      - application/json;charset=utf-8
+      Content-Length:
+      - '25'
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=d49b33e6ec9e6d3dcf74ed76cb01e17c31541109948; expires=Fri, 01-Nov-19
+        22:05:48 GMT; path=/; domain=.teachable.tech; HttpOnly
+      X-Content-Type-Options:
+      - nosniff
+      X-Request-Id:
+      - 25F1A5E8BE6243DD961361188F606685
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 4731aa3ad1ba3f7d-YUL
+    body:
+      encoding: UTF-8
+      string: aNewTestListItem finished
+    http_version: 
+  recorded_at: Thu, 01 Nov 2018 22:05:48 GMT
+recorded_with: VCR 4.0.0
