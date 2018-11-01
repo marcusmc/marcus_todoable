@@ -12,7 +12,7 @@ class Todoable
     def initialize(username, password)
         @username = username
         @password = password
-        retrieve_token()
+        retrieve_token
     end
 
     def create_list(name)
@@ -91,7 +91,7 @@ class Todoable
         )
         case result.code
         when 401
-            raise TodoableError.new('Username and password are not valid.')
+            raise TodoableError.new('Credentials given are not valid.')
         when 200   
             @token = result.parsed_response["token"]
             @token_expiration = DateTime.parse(result.parsed_response["expires_at"])
