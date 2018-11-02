@@ -5,6 +5,7 @@ require 'Timecop'
 describe Todoable do
     before(:all) do
         @test_storage = {}
+        Timecop.travel("Thu, 01 Nov 2018 22:05:44 GMT")
     end
     it "includes the HTTParty methods" do
         expect(Todoable).to include HTTParty
@@ -73,7 +74,8 @@ describe Todoable do
     end
     it "retrieves a new token when it has expired", :vcr do
         subject.get_lists
-        Timecop.freeze(DateTime.now.to_time + 1200) do
+        Timecop.freeze(DateTime.now.to_time + 1210) do
+            puts DateTime.now
             subject.get_lists
             expect(a_request(:post, "#{Todoable.base_uri}/authenticate"))
             .to have_been_made.times(2)
